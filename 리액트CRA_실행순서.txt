@@ -1,0 +1,102 @@
+< 리액트 CRA >
+
+ctrl + shift + ` 눌러 새터미널창 열기
++기호옆에 아래화살표▽ 모양 눌러서 Command Prompt 눌러 cmd추가하기(만들기)
+
+1. 리액트(react) 프로젝트 앱(app) 만들기(create)
+   => npx create-react-app kurly
+   => cd kurly
+   => npm start
+   그러면 React App 브라우저가 열린다.
+
+ctrl + shift + ` 눌러 새터미널창 열기
+
+2. 프로젝트로 경로이동
+   => cd just_shop
+   => dir
+
+3. 사스(SASS) 설치하기
+   npm install sass
+   => npm i sass
+
+4. 패키지제이슨(package.json) 파일 열고 설치파일 확인한다.
+
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",        ===> 설치 확인
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.56.1",
+    "web-vitals": "^2.1.4"
+  },
+
+5. public 폴더 열고 파일 정리 삭제
+   css
+   js
+   img
+   index.html 만 남겨놓거나 만들어주기
+
+6. index.html - 헤더영역에 환경설정
+   사용언어 : ko
+   파비콘 images폴더 경로  ./images/
+   스타일 지정 <link .../>
+   제이쿼리 오픈 스크립트
+   바벨 오픈 스크립트
+
+- 바디 영역 환경설정
+
+  돔컨테이너 #root
+  <div id="root"></div>
+
+  제이쿼리 스크립트 사용자 파일 타입설정 type='text/babel'
+  <script type="text/babel" src="./script/script.js"></script>
+
+7. SRC : 컴포넌트.js, 인덱스.js, 스타일.css, 스타일.scss, 등 환경설정하기
+   - index.js는 리액트에서 정해진 이름이고 반드시 필요한 파일입니다.
+   - index.js를 제외한 모든 파일들을 삭제한다.
+
+//////////////////////////////////////////////////////////////////////////
+  import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+  
+  );
+//////////////////////////////////////////////////////////////////////////
+
+8.  컴포넌트폴더 만들기
+    - 앱(app) 구성 모든 컴포넌트 만들기
+      컴포넌트 폴더이름 : components
+
+9.  컴포넌트.js 만들기
+      WrapComponent.js
+
+        HeaderComponent.js
+        MainComponent.js
+          Section1component.js
+          Section2component.js
+      
+        FooterComponent.js
+        ModalComponent.js
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <js에 rsc치면 나오는 내용>
+    import React from 'react';
+    
+    const HeaderComponent = () => {      ===>   function HeaderComponent () {          로 변경해준다 
+      return (                                    return (
+        <div>                                       <div>                
+            
+        </div>                                      </div>
+      );                                          );
+    };                                          };
+      
+    export default HeaderComponent;             export default HeaderComponent;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+10. 모든 컴포넌트 : 프롭스 와 상태관리 기본 프롭스 모두 복사 붙여넣기
+
+
